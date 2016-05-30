@@ -1,0 +1,9 @@
+class Solution{
+public:
+	void delete_node(ListNode *node ){	
+	node->val=node->next->val;
+	ListNode *next_node=node->next;
+	node->next=next_node->next;
+	delete next_node;	
+}
+};
